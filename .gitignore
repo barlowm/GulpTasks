@@ -1,0 +1,9 @@
+*.db
+*.log
+*.NOT_NEEDED
+
+/build/* 
+/_Temp/*
+/node_modules/*
+/htdocs/*
+/reports/*
