@@ -1,39 +1,22 @@
 "use strict";
 const $ = require("../config.js");
 
-$.gulp.task(
-	"test", 
-	"Runs all MOCHA tests AFTER Stripping all the debug/console.log statements",
-	["strip"],
-	function () {
+const test = function() {
 	return $.gulp
-		.src(["tests/*.js"], {read: false})
-		.pipe($.mocha({
-			reporter: "mochawesome",
-			reporterOptions: {
-				reportDir: "reports",
-				reportName: "TestReports",
-				reportTitle: "Test Report",
-				inlineAssets: true
+		.src(["./tests/basic/*.js"], {read: false})
+		.pipe($.mocha(
+			{
+				reporter: "mochawesome",
+				reporterOptions: {
+					reportDir: "reports",
+					reportName: "Module Test Reports",
+					reportFilename: "VSR Audit Module Tests",
+					reportTitle: "VSR Audit System Modules Test Report",
+					inlineAssets: true
+				}
 			}
-		}));
-});
+		));
+};
+test.description = "Runs MOCHA Tests";
 
-$.gulp.task(
-	"tests", 
-	"Runs all MOCHA tests",
-	[],
-	function () {
-	return $.gulp
-		.src(["tests/*.js"], {read: false})
-		.pipe($.mocha({
-			reporter: "mochawesome",
-			reporterOptions: {
-				reportDir: "reports",
-				reportName: "TestReports",
-				reportTitle: "Test Report",
-				inlineAssets: true
-			}
-		}));
-});
-
+$.gulp.task("test",test);
