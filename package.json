@@ -17,7 +17,6 @@
     "url": "https://github.com/barlowm/gulp_tasks/issues"
   },
   "homepage": "https://github.com/barlowm/gulp_tasks#readme",
-
   "dependencies": {
     "config": "^1.24.0",
     "dotenv": "^2.0.0",
@@ -33,7 +32,6 @@
     "toml": "^2.3.0",
     "underscore": "^1.8.3"
   },
-
   "devDependencies": {
     "aliasify": "^2.1.0",
     "autoprefixer": "^6.5.3",
@@ -50,7 +48,7 @@
     "coffee-script": "^1.11.1",
     "cson": "^4.0.0",
     "del": "^2.2.2",
-    "eslint": "^3.11.1",
+    "eslint": ">=4.18.2",
     "eslint-plugin-json": "^1.2.0",
     "gulp": "^3.9.1",
     "gulp-cache": "^0.4.5",
@@ -86,6 +84,6 @@
     "supertest-as-promised": "^4.0.2",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.7.0"  
+    "watchify": "^3.7.0"
   }
 }
