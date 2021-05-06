@@ -30,7 +30,7 @@
     "proxy-middleware": "^0.15.0",
     "require-dir": "^0.3.1",
     "toml": "^2.3.0",
-    "underscore": "^1.8.3"
+    "underscore": "^1.12.1"
   },
   "devDependencies": {
     "aliasify": "^2.1.0",
